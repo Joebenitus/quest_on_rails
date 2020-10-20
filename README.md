@@ -17,6 +17,8 @@ A role playing game in which users must go on quests, to obtain items by fightin
 - "As a player, I want the game to tell me when I hit the HP threshold, so that  I can know that I won the game."
  - "As a player, I want to be able to set my name."
 - "As a player, I want to know when an enemy is defeated so I ca nget an item and earn HP by getitng that item."
+- "As a player, I want to be able to go on multiple quests."
+- "As a player, I want to be able to collect items throughout the game."
 
 ## Setup/Installation Requirements
 
@@ -28,15 +30,14 @@ A role playing game in which users must go on quests, to obtain items by fightin
 ## Models Checklist
 
 table quests{
-  name text
-  instructions text
-  player_id FK
+  name text x
+  instructions text x
+  player_id FK x
 }
 
 table items{
-  name text
-  user_id FK
-}
+  name text x 
+  user_id FK x
 
 table locations{
   name text
