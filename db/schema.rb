@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_173911) do
+ActiveRecord::Schema.define(version: 2020_10_20_184736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "enemies", force: :cascade do |t|
+    t.string "name"
+    t.integer "location_id"
+    t.boolean "defeated?"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +38,14 @@ ActiveRecord::Schema.define(version: 2020_10_20_173911) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
+    t.integer "hp"
+    t.integer "location_id"
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "enemies", "locations"
+  add_foreign_key "items", "users"
 end
