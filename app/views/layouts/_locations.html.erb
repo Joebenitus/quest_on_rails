@@ -1,0 +1,7 @@
+<% if user_signed_in?%>
+<h2>Travel to: </h2>
+<div class="text-nowrap">
+<span class="text-nowrap"><% @locations.each do |location| %> <%= link_to location.name, location_path(location) %></span>
+  <% end %>
+</div>
+<%end%>

@@ -6,5 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Location.destroy_all
+Item.destroy_all
 
-location1= Location.create({name: "tutorial", id: 1})
+5.times do |index|
+  Location.create!(name: Faker::Games::ElderScrolls.city)
+end
