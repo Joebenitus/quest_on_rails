@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   color:whitesmoke;
+   text-align:center;
+   background-color:#a5a58d;
+  font-family: 'DM Serif Text', serif;
+ }
+.title{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 64px;
+  color:darkslategrey;
+  text-decoration: none; 
+}
+a{
+  color:black;
+}
+.smol {
+  font-size:14px;
+  font-family: 'Press Start 2P', cursive;
+  color:black;
+}

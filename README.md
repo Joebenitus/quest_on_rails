@@ -19,6 +19,7 @@ A role playing game in which users must go on quests, to obtain items by fightin
 - "As a player, I want to know when an enemy is defeated so I ca nget an item and earn HP by getitng that item."
 - "As a player, I want to be able to go on multiple quests."
 - "As a player, I want to be able to collect items throughout the game."
+- "As a player I want to be able to go on quests, collect items, and fight enemies in order to get HP to win."
 
 ## Setup/Installation Requirements
 

@@ -1,0 +1,8 @@
+<h1>Items you may locate on your quest: </h1>
+<% if @items.any?%>
+  <% @items.each do |item| %>
+    <h4><%= item.name %></h4>
+  <% end %>
+<% else%>
+  The elves haven't crafted any items yet.
+<% end %>
